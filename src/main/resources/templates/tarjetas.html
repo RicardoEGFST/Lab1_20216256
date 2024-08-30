@@ -13,14 +13,14 @@
   <div class="container px-4 py-5">
     <h1 class="pb-2 mb-4 border-bottom">Juego de Bingo</h1>
 
-    <table>
+    <table class="table ">
 
-      <tr th:each="tarjeta : ${tarjetas}">
+      <tr th:each="tarjeta : ${tarjetas}" >
 
-        <table>
+        <table style="margin-top: 20px" class="table table-sm">
             <tr th:each="columna : ${tarjeta}">
               <td th:each="valor : ${columna}" th:text="${valor}">  </td>
-          </tr>
+            </tr>
         </table>
 
       </tr>
@@ -37,7 +37,7 @@
 
 
     <h2 class="pb-2 mb-4 border-bottom" th:text="'Números de Bingo: '"></h2>
-    <form method="POST" action="">
+    <form method="POST" action="/InicioJuego">
       <label>Ingresar números de Bingo</label>
       <input type="text" name="Numero" class="form-control"/><br />
       <input type="submit" value="NumeroBingo" class="btn btn-primary" style="margin-top: 10px;"/>
